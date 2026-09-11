@@ -22,7 +22,9 @@ Navigate to the respective directories below to access the detailed `README.md` 
   Classes, inheritance, encapsulation, and modular design patterns.
 * **[06. Data Science Ecosystem](./06_Data_Science_Ecosystem/)**
   Intensive data manipulation, aggregation, and analysis utilizing NumPy and Pandas.
-* **[07. Real-World APIs & Capstone](./07_Real_World_and_Capstone/)**
+* **[07. Building APIs with FastAPI](./07_Building_APIs_with_FastAPI/)**
+  Building high-performance RESTful APIs, routing, and data validation using Pydantic.
+* **[08. Real-World APIs & Capstone](./08_Real_World_and_Capstone/)**
   Fetching data from public REST APIs and the final comprehensive project.
 
 ## Getting Started
@@ -44,6 +46,16 @@ You can browse the folders directly, or clone the repository locally to search t
 git clone https://github.com/AhmadAbukhuit/Python-Training-Materials.git
 cd Python-Training-Materials
 ```
+
+## 🌐 Recommended External Resources
+
+While this curriculum provides self-contained hands-on tasks, passing technical interviews requires continuous practice. We highly recommend utilizing the following platforms to test your skills:
+
+* **[LeetCode](https://leetcode.com/):** The industry standard for Data Structures & Algorithms interview prep.
+* **[HackerRank](https://www.hackerrank.com/):** Excellent for practicing Python-specific syntax and built-in functions.
+* **[Codewars](https://www.codewars.com/):** Great for community-driven, gamified coding challenges.
+
+*Note: Any external links provided in the modules are the intellectual property of their respective platforms. We encourage students to create free accounts on these sites to utilize their automated testing environments.*
 
 ## 🤝 Contributing
 

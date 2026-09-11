@@ -1,0 +1,4 @@
+[lint]
+# B008: Do not perform function call in argument defaults
+# This is ignored globally because FastAPI relies on Depends(), Query(), Body(), etc., as default arguments.
+ignore = ["B008", "BLE001", "I001"]
