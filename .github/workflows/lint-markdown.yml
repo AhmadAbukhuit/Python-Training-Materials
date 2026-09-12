@@ -14,11 +14,67 @@ jobs:
   markdownlint:
     name: Run Markdown Linter
     runs-on: ubuntu-latest
+    
+    # CRITICAL: This permission allows the bot to read/write issues
+    permissions:
+      issues: write
+      contents: read
+      
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Run markdownlint
-        uses: DavidAnson/markdownlint-cli2-action@v15
-        with:
-          globs: "**/*.md"
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli2
+
+      - name: Run linter and capture output
+        id: linter
+        run: markdownlint-cli2 "**/*.md" > lint_report.txt 2>&1
+        continue-on-error: true # Keep going so we can manage issues
+
+      - name: Manage GitHub Issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # We run this step ALWAYS, even if the linter passes, so it can close fixed issues
+        run: |
+          # 1. Create a list of files that failed (if any)
+          touch bad_files.txt
+          if [ -s lint_report.txt ]; then
+            grep -oE '^[^:]+\.md' lint_report.txt | sort -u > bad_files.txt || true
+          fi
+
+          # 2. Get all currently OPEN linting issues created by this workflow
+          gh issue list --label "documentation" --search "in:title 📝 Markdown Lint Errors:" --state open --json number,title -q '.[] | "\(.number) \(.title)"' | sed 's/ 📝 Markdown Lint Errors: /\t/' > open_issues.txt || touch open_issues.txt
+
+          # 3. CLOSE issues for files that are now fixed
+          while IFS=$'\t' read -r issue_num file_path; do
+            if [ -n "$issue_num" ] && ! grep -Fxq "$file_path" bad_files.txt; then
+              echo "Closing issue #$issue_num for $file_path (Fixed!)"
+              gh issue close "$issue_num" -m "✅ The markdown issues in \`$file_path\` have been fixed in the latest commit!"
+            fi
+          done < open_issues.txt
+
+          # 4. CREATE issues only for NEW failures (prevents duplicates)
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue # Skip empty lines
+            
+            # Check if an issue already exists for this file
+            if ! grep -Fq "$file" open_issues.txt; then
+              grep "^$file" lint_report.txt > current_file_errors.txt
+              
+              gh issue create \
+                --title "📝 Markdown Lint Errors: $file" \
+                --body "The automated linter found formatting issues in \`$file\`. Please review and fix them.
+
+                **Error Details:**
+                \`\`\`text
+                $(cat current_file_errors.txt)
+                \`\`\`" \
+                --label "documentation"
+            fi
+          done < bad_files.txt
+
+      - name: Fail the workflow
+        # Finally, force the workflow to show a red "X" if the linter failed
+        if: steps.linter.outcome == 'failure'
+        run: exit 1
