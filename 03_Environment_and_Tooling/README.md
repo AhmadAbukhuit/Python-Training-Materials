@@ -6,10 +6,14 @@ You will learn how to isolate your projects using Virtual Environments, install 
 
 ## Topics Covered
 
-* **[1. Virtual Environments (venv):](./01_Virtual_Environments/)** Understanding environment isolation, and learning how to create, activate, and deactivate virtual environments to prevent version conflicts.
-* **[2. Package Management (pip):](./02_Package_Management/)** Harnessing the Python Package Index (PyPI) to install, upgrade, and remove external libraries using Python's default package manager.
-* **[3. Dependency Management:](./03_Dependency_Management/)** Creating reproducible builds by "freezing" environments and generating/installing from requirements.txt files.
-* **[4. Professional Project Structure:](./04_Professional_Project_Structure/)** Organizing your workspace, separating source code from environment files, and configuring .gitignore to keep your version control clean.
+* **[1. Virtual Environments (venv):](./01_Virtual_Environments/)**  
+    Understanding environment isolation, and learning how to create, activate, and deactivate virtual environments to prevent version conflicts.
+* **[2. Package Management (pip):](./02_Package_Management/)**  
+    Harnessing the Python Package Index (PyPI) to install, upgrade, and remove external libraries using Python's default package manager.
+* **[3. Dependency Management:](./03_Dependency_Management/)**  
+    Creating reproducible builds by "freezing" environments and generating/installing from requirements.txt files.
+* **[4. Professional Project Structure:](./04_Professional_Project_Structure/)**  
+    Organizing your workspace, separating source code from environment files, and configuring .gitignore to keep your version control clean.
 
 ---
 
@@ -19,7 +23,7 @@ You will learn how to isolate your projects using Virtual Environments, install 
 
 **Objective:** Organize a workspace professionally by separating source code, tests, and environment configurations.
 
-* **Where to work:** Navigate to the task_3_1_skeleton directory.
+* **Where to work:** Navigate to the **[task_3_1_skeleton](./Tasks/task_3_1_skeleton/)** directory.
 * **Requirements:**
     * Using your terminal or file explorer, create two new folders inside this directory: `src` and `tests`.
     * Create a new file named exactly `.gitignore` in the root of this directory.
@@ -39,7 +43,7 @@ python test_skeleton.py
 
 **Objective:** Practice reading a `requirements.txt` file to recreate a project's exact environment.
 
-* **Where to work:** Navigate to the task_3_2_blueprint directory.
+* **Where to work:** Navigate to the **[task_3_2_blueprint](./Tasks//task_3_2_blueprint/)** directory.
 * **Requirements:**
     * Create a new `requirements.txt` file in this folder and add these two lines exactly:
         * `requests==2.31.0`
@@ -62,7 +66,7 @@ python test_blueprint.py
 
 **Objective:** Practice installing third-party libraries and "freezing" an environment to create a reproducible blueprint.
 
-* **Where to work:** Navigate to the task_3_3_freeze directory.
+* **Where to work:** Navigate to the **[task_3_3_freeze](./Tasks/task_3_3_freeze/)** directory.
 * **Requirements:**
     * Create and activate a new virtual environment in this folder.
     * Use `pip` to install the `cowsay` package (a fun terminal graphics library).
@@ -82,7 +86,7 @@ python test_freeze.py
 
 **Objective:** Write a Python script that successfully utilizes a third-party library installed in an isolated environment.
 
-* **Where to work:** Navigate to the task_3_4_api directory.
+* **Where to work:** Navigate to the **[task_3_4_api](./Tasks/task_3_4_api/)** directory.
 * **Requirements:**
     * Create a virtual environment, activate it, and `pip install requests`.
     * Create a file named `fetch_data.py`.

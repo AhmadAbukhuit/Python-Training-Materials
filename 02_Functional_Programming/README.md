@@ -6,10 +6,14 @@ We will also cover how to handle unexpected errors gracefully so your programs d
 
 ## Topics Covered
 
-* **[1. Function Fundamentals:](./01_Function_Fundamentals/)** Defining functions, utilizing positional and keyword arguments, setting default parameters, and managing return values.
-* **[2. Variable Scoping:](./02_Variable_Scoping/)** Understanding the LEGB rule (Local, Enclosing, Global, Built-in) and how Python resolves variable access and lifetimes.
-* **[3. Lambda & Higher-Order Functions:](./03_Lambda_and_Higher_Order_Functions/)** Writing inline, anonymous functions and applying them dynamically using `map()` and `filter()`.
-* **[4. Exception Handling:](./4_Exception_Handling/)** Building robust applications that gracefully catch and handle unexpected user inputs or system errors using `try`, `except`, `else`, and `finally` blocks.
+* **[1. Function Fundamentals:](./01_Function_Fundamentals/)**  
+  Defining functions, utilizing positional and keyword arguments, setting default parameters, and managing return values.
+* **[2. Variable Scoping:](./02_Variable_Scoping/)**  
+  Understanding the LEGB rule (Local, Enclosing, Global, Built-in) and how Python resolves variable access and lifetimes.
+* **[3. Lambda & Higher-Order Functions:](./03_Lambda_and_Higher_Order_Functions/)**  
+  Writing inline, anonymous functions and applying them dynamically using `map()` and `filter()`.
+* **[4. Exception Handling:](./4_Exception_Handling/)**  
+  Building robust applications that gracefully catch and handle unexpected user inputs or system errors using `try`, `except`, `else`, and `finally` blocks.
 
 ---
 

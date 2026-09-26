@@ -6,17 +6,22 @@ In this module, you will learn how to store, manipulate, and retrieve complex da
 
 ## Topics Covered
 
-* **[1. Lists & Tuples: Sequential Data](./01_Lists_and_Tuples/)**
+* **[1. Lists & Tuples: Sequential Data](./01_Lists_and_Tuples/)**  
   Understanding ordered collections, the critical difference between mutable and immutable data, slicing, and list methods.
-* **[2. Dictionaries: Key-Value Mapping](./02_Dictionaries/)**
+
+* **[2. Dictionaries: Key-Value Mapping](./02_Dictionaries/)**  
   Building scalable relationships using key-value pairs, managing nested data structures, and performing lightning-fast lookups.
-* **[3. Sets: Unique Collections](./03_Sets/)**
-  Managing collections of unique items, deduplication, and utilizing mathematical set operations (union, intersection, difference).
-* **[4. Data Comprehensions: The Pythonic Way](./04_Data_Comprehensions/)**
+
+* **[3. Sets: Unique Collections](./03_Sets/)**  
+    Managing collections of unique items, deduplication, and utilizing mathematical set operations (union, intersection, difference).
+
+* **[4. Data Comprehensions: The Pythonic Way](./04_Data_Comprehensions/)**  
   Writing elegant, highly optimized one-liners to dynamically generate lists, dictionaries, and sets without standard loops.
-* **[5. The `collections` Module: Advanced Structures](./05_Collections_Module/)**
+
+* **[5. The `collections` Module: Advanced Structures](./05_Collections_Module/)**  
   Leveling up with specialized data structures like `defaultdict`, `Counter`, `deque`, and `namedtuple` for professional, high-performance tasks.
-* **[6. File Input/Output (I/O):](./06_File_IO/)**
+
+* **[6. File Input/Output (I/O):](./06_File_IO/)**  
   Persisting data safely using Context Managers (the `with` statement), and parsing both standard text files and structured JSON data.
 
 ---

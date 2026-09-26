@@ -4,12 +4,23 @@ Welcome to the first module of the Python Training Program. This section covers 
 
 ## Topics Covered
 
-* **[01. Python Rules & Principles:](./01_Python_Rules_and_Principles/)** Understanding the governing rules and philosophy of Python.
-* **[02. Variables & Data Types:](./02_Variables_and_Data_Types/)** Understanding primitive data types including Integers, Floats, Strings, and Booleans.
-* **[03. Operators:](./03_Operators/)** Undersanding.
-* **[04. Input/Output:](./04_Input_and_Output/)** Mastering basic I/O operations using `input()` and `print()`.
-* **[05. Control Flow:](./05_Controle_Flow/)** Implementing conditionals utilizing `if`, `elif`, and `else` clauses.
-* **[06. Iteration:](./06_Iteration/)** Deep dive into `for` and `while` loops, iterating over sequences, and using control statements like `break`, `continue`, and `pass`.
+* **[01. Python Rules & Principles:](./01_Python_Rules_and_Principles/)**  
+  Understanding the governing rules, PEP 8 style guide, and philosophy of Python.
+
+* **[02. Variables & Data Types:](./02_Variables_and_Data_Types/)**  
+  Understanding primitive data types including Integers, Floats, Strings, and Booleans.
+
+* **[03. Operators:](./03_Operators/)**  
+  Mastering arithmetic, comparison, logical, assignment, identity (`is`), and membership (`in`) operators.
+  
+* **[04. Input/Output:](./04_Input_and_Output/)**  
+  Mastering basic I/O operations using `input()` and `print()`, formatting with f-strings.
+
+* **[05. Control Flow:](./05_Control_Flow/)**  
+  Implementing conditionals utilizing `if`, `elif`, and `else` clauses.
+
+* **[06. Iteration:](./06_Iteration/)**  
+  Deep dive into `for` and `while` loops, iterating over sequences, and using control statements like `break`, `continue`, and `pass`.
 
 ---
 
@@ -34,7 +45,7 @@ Create a script that prompts the user for information and prints a formatted sum
 Once you have written your solution, you can verify its logic using the provided automated test script. Open your terminal, ensure you are in the correct directory, and run the following commands:
 
 ```bash
-cd task_1_user_profile
+cd Tasks/task_1_1_user_profile
 python test_user_profile.py
 ```
 
@@ -46,7 +57,7 @@ python test_user_profile.py
 
 You have intercepted a messy, unformatted log entry from a legacy database. Your task is to clean and extract the relevant information using Python's string operations.
 
-* **Where to write your code:** Navigate to the **[task_1_2_string_surgeon](./task_1_2_string_surgeon/)** directory and write your solution inside the `string_surgeon.py` file.
+* **Where to write your code:** Navigate to the **[task_1_2_string_surgeon](./Tasks/task_1_2_string_surgeon/)** directory and write your solution inside the `string_surgeon.py` file.
 * **Target String:**
   `log_entry = "   ERROR-CODE: 404 - file_not_found - admin_node_7   "`
 * **Processing Steps:**
@@ -58,10 +69,10 @@ You have intercepted a messy, unformatted log entry from a legacy database. Your
 * **Output Requirements:** Print the result of each step one by one so you can visually verify how the string transforms through the pipeline.
 
 **How to test your code:**
-Once you have written your solution, you can verify its logic using the automated test script located in the **[task_1_2_string_surgeon](./task_1_2_string_surgeon/)** folder. Open your terminal, ensure you are in the correct directory, and run the following commands:
+Once you have written your solution, you can verify its logic using the automated test script located in the **[task_1_2_string_surgeon](./Tasks/task_1_2_string_surgeon/)** folder. Open your terminal, ensure you are in the correct directory, and run the following commands:
 
 ```bash
-cd task_1_2_string_surgeon
+cd Tasks/task_1_2_string_surgeon
 python test_string_surgeon.py
 ```
 
@@ -73,7 +84,7 @@ python test_string_surgeon.py
 
 Create a program that simulates fundamental logic gates (AND, OR, NOT, XOR).
 
-* **Where to write your code:** Navigate to the **[task_1_3_logic_gate](./task_1_3_logic_gate/)** directory and write your solution inside the `logic_gate.py` file.
+* **Where to write your code:** Navigate to the **[task_1_3_logic_gate](./Tasks/task_1_3_logic_gate/)** directory and write your solution inside the `logic_gate.py` file.
 * **Input:** Two boolean inputs (A and B, accepted as `True`/`False` or `1`/`0`).
 * **Requirements:**
   * Implement checks for AND, OR, and NOT gates.
@@ -81,10 +92,10 @@ Create a program that simulates fundamental logic gates (AND, OR, NOT, XOR).
 * **User Interaction:** Prompt the user to select a gate to test, take the necessary inputs, and print the resulting output.
 
 **How to test your code:**
-Once your solution is ready, verify its logic using the automated test script located in the **[task_1_3_logic_gate](./task_1_3_logic_gate/)** folder. Open your terminal, ensure you are in the correct directory, and run:
+Once your solution is ready, verify its logic using the automated test script located in the **[task_1_3_logic_gate](./Tasks/task_1_3_logic_gate/)** folder. Open your terminal, ensure you are in the correct directory, and run:
 
 ```bash
-cd task_1_3_logic_gate
+cd Tasks/task_1_3_logic_gate
 python test_logic_gate.py
 ```
 
@@ -96,7 +107,7 @@ python test_logic_gate.py
 
 Write a script that checks a user-provided password against complex rules. Use a `while` loop to keep prompting the user until a valid password is provided.
 
-* **Where to write your code:** Navigate to the **[task_1_4_password_validator](./task_1_4_password_validator/)** directory and write your solution inside the `password_validator.py` file.
+* **Where to write your code:** Navigate to the **[task_1_4_password_validator](./Tasks/task_1_4_password_validator/)** directory and write your solution inside the `password_validator.py` file.
 * **Rules:** The password must meet all the following criteria:
   * Minimum length of 8 characters.
   * Contains at least one Uppercase letter.
@@ -106,10 +117,10 @@ Write a script that checks a user-provided password against complex rules. Use a
 * **Processing:** Use a `for` loop to iterate through the characters of the password and count rule fulfillment. Provide specific feedback to the user on which rules failed. Use the `break` keyword only when all conditions are met successfully.
 
 **How to test your code:**
-Once your solution is ready, verify its logic using the automated test script located in the **[task_1_4_password_validator](./task_1_4_password_validator/)** folder. Open your terminal, ensure you are in the correct directory, and run:
+Once your solution is ready, verify its logic using the automated test script located in the **[task_1_4_password_validator](./Tasks/task_1_4_password_validator/)** folder. Open your terminal, ensure you are in the correct directory, and run:
 
 ```bash
-cd task_1_4_password_validator
+cd Tasks/task_1_4_password_validator
 python test_password_validator.py
 ```
 
@@ -141,7 +152,7 @@ Write a complete Python script that satisfies all the following business logic a
 Once you have written your solution, you can verify its logic using the provided automated test script located in the **[01_cinema_ticketing](./Projects/01_cinema_ticketing/)** folder. Open your terminal, ensure you are in the correct directory, and run the following commands:
 
 ```bash
-cd exam_cinema_ticketing
+cd Projects/01_cinema_ticketing
 python test_cinema_ticketing.py
 ```
 
@@ -169,6 +180,6 @@ Write a complete Python script that satisfies all the following business logic a
 Once you have written your solution, you can verify its logic using the provided automated test script located in the **[02_atm_simulator](./Projects/02_atm_simulator/)** folder. Open your terminal, ensure you are in the correct directory, and run the following commands:
 
 ```bash
-cd exam_atm_simulator
+cd Projects/02_atm_simulator
 python test_atm_simulator.py
 ```
