@@ -7,6 +7,7 @@ In software engineering, repeating yourself is a major liability. If a bug exist
 ## 1. The Concept: "IS-A" Relationships
 
 Inheritance should strictly represent an **"IS-A"** relationship:
+
 * A `Router` **is a** `NetworkNode`.
 * A `Switch` **is a** `NetworkNode`.
 * A `Firewall` **is a** `NetworkNode`.
@@ -93,6 +94,7 @@ for dev in devices:
 ```
 
 **Output:**
+
 ```text
 [core-rtr-01] Routing packet PKT-90210 via BGP.
 [access-sw-01] Switching packet PKT-90210 via MAC address table.
@@ -201,6 +203,8 @@ Python traverses this list from left to right, guaranteeing that child classes a
 
 ## 7. Common Gotchas to Avoid
 
-> [!WARNING]
-> * **Forgetting `super().__init__()`:** If you override `__init__` in a child class without calling `super().__init__()`, the parent attributes (`self.hostname`, `self.ip_address`) will never be initialized, causing an `AttributeError` later!
-> * **Deep Inheritance Hierarchies:** Avoid creating hierarchies deeper than 2–3 levels (e.g., `Device -> NetworkDevice -> Layer3Device -> SecureLayer3Device -> EnterpriseRouter`). Deep hierarchies become brittle and difficult to debug. Prefer **Composition** when relationships are complex.
+* **Forgetting `super().__init__()`:**  
+If you override `__init__` in a child class without calling `super().__init__()`, the parent attributes (`self.hostname`, `self.ip_address`) will never be initialized, causing an `AttributeError` later!
+
+* **Deep Inheritance Hierarchies:**  
+Avoid creating hierarchies deeper than 2–3 levels (e.g., `Device -> NetworkDevice -> Layer3Device -> SecureLayer3Device -> EnterpriseRouter`). Deep hierarchies become brittle and difficult to debug. Prefer **Composition** when relationships are complex.

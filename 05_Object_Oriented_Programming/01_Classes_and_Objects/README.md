@@ -173,6 +173,8 @@ print(NetworkServer.is_valid_ipv4("999.1.1.1"))    # False
 
 ## 6. Common Gotchas to Avoid
 
-> [!WARNING]
-> * **Forgetting `self` in method definitions:** Defining `def boot_up():` inside a class will cause a `TypeError: boot_up() takes 0 positional arguments but 1 was given` when called on an instance.
-> * **Shadowing Class Attributes:** Assigning `s1.default_ssh_port = 2222` does **not** change the class attribute. It creates a brand-new instance attribute named `default_ssh_port` on `s1`, leaving `NetworkServer.default_ssh_port` unchanged. Always mutate class attributes via `ClassName.attribute = value`.
+* **Forgetting `self` in method definitions:**  
+Defining `def boot_up():` inside a class will cause a `TypeError: boot_up() takes 0 positional arguments but 1 was given` when called on an instance.
+
+* **Shadowing Class Attributes:**  
+Assigning `s1.default_ssh_port = 2222` does **not** change the class attribute. It creates a brand-new instance attribute named `default_ssh_port` on `s1`, leaving `NetworkServer.default_ssh_port` unchanged. Always mutate class attributes via `ClassName.attribute = value`.

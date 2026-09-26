@@ -2,7 +2,7 @@
 
 In modern software development, a large percentage of classes exist solely to store and pass around structured data (e.g., API payloads, database records, network configuration models).
 
-Before Python 3.7, writing a data container class required writing dozens of lines of repetitive boilerplate: an `__init__` constructor, a `__repr__` for readable printing, and an `__eq__` method for comparison. 
+Before Python 3.7, writing a data container class required writing dozens of lines of repetitive boilerplate: an `__init__` constructor, a `__repr__` for readable printing, and an `__eq__` method for comparison.
 
 Python 3.7 introduced **Data Classes** (via the `dataclasses` standard library module) to eliminate this boilerplate entirely.
 
@@ -13,6 +13,7 @@ Python 3.7 introduced **Data Classes** (via the `dataclasses` standard library m
 Consider modeling a `HostRecord` the traditional way vs. the modern `@dataclass` way:
 
 ### The Traditional Way (Boilerplate Heavy)
+
 ```python
 class HostRecord:
     def __init__(self, hostname: str, ip_address: str, port: int = 80):
@@ -30,6 +31,7 @@ class HostRecord:
 ```
 
 ### The Modern Way: `@dataclass`
+
 ```python
 from dataclasses import dataclass
 
@@ -41,6 +43,7 @@ class HostRecord:
 ```
 
 With just **5 lines of code**, `@dataclass` automatically writes:
+
 * An `__init__()` method that initializes all attributes.
 * A formatted `__repr__()` for easy debugging.
 * An `__eq__()` method that compares instances by value, not memory address!
@@ -57,7 +60,7 @@ print(h1 == h2)    # Outputs: True (Automatically compares values!)
 
 ## 2. Advanced Defaults with `field(default_factory=...)`
 
-Just like standard classes, **never use a mutable object (like a list or dictionary) directly as a default value**. In dataclasses, Python protects you from this by raising a `ValueError`. 
+Just like standard classes, **never use a mutable object (like a list or dictionary) directly as a default value**. In dataclasses, Python protects you from this by raising a `ValueError`.
 
 To supply a default list, dictionary, or set, use `field(default_factory=...)`:
 
@@ -107,7 +110,7 @@ print(subnet_lookup[lan])  # Main Office
 
 ## 4. Post-Initialization Validation: `__post_init__`
 
-What if you need validation or derived attribute calculation upon instantiation? 
+What if you need validation or derived attribute calculation upon instantiation?
 
 `@dataclass` automatically invokes `__post_init__` right after the generated `__init__` finishes:
 
@@ -148,6 +151,8 @@ When should you choose a dataclass versus other Python structures?
 
 ## 6. Common Gotchas to Avoid
 
-> [!WARNING]
-> * **Type Hints are Mandatory:** `@dataclass` only inspects attributes with explicit type hints. If you write `hostname = "localhost"` without a type annotation (like `str`), dataclass treats it as a static class attribute rather than an instance field!
-> * **Inheritance Ordering:** In dataclass inheritance, fields without default values cannot follow fields with default values in the inheritance chain (adhering to standard Python argument ordering rules).
+* **Type Hints are Mandatory:**  
+`@dataclass` only inspects attributes with explicit type hints. If you write `hostname = "localhost"` without a type annotation (like `str`), dataclass treats it as a static class attribute rather than an instance field!
+
+* **Inheritance Ordering:**  
+In dataclass inheritance, fields without default values cannot follow fields with default values in the inheritance chain (adhering to standard Python argument ordering rules).

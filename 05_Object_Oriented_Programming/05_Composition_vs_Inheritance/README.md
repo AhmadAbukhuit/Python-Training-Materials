@@ -30,6 +30,7 @@ flowchart TD
 ## 2. Tight Coupling vs. Dependency Injection
 
 ### The Problem: Tight Coupling
+
 If a container class instantiates its own dependencies directly inside `__init__`, the classes become tightly coupled:
 
 ```python
@@ -41,6 +42,7 @@ class Server:
 ```
 
 ### The Solution: Composition via Dependency Injection
+
 Instead of constructing components inside the class, pass them in as arguments (known as **Dependency Injection**). This makes your classes modular, easy to unit test, and open to extension:
 
 ```python
@@ -89,6 +91,7 @@ prod_server.run_health_check()
 ```
 
 **Output:**
+
 ```text
 === Health Report for Server 'cloud-compute-01' ===
 CPU: Ampere Altra (64 cores) running diagnostics: OK
@@ -119,6 +122,8 @@ For example, if the server receives a compute request, it delegates calculation 
 
 ## 5. Common Gotchas to Avoid
 
-> [!WARNING]
-> * **The God Object Anti-Pattern:** When using composition, avoid making the outer container do everything. Let each subcomponent do its own work. If your `Server` class starts calculating memory parity checks directly instead of letting `Memory` handle it, encapsulation is broken.
-> * **Forced Inheritance ("Yo-Yo Problem"):** If you find yourself jumping up and down 5 different files in an inheritance hierarchy just to understand what a single method does, that hierarchy should be refactored into composed objects.
+* **The God Object Anti-Pattern:**  
+When using composition, avoid making the outer container do everything. Let each subcomponent do its own work. If your `Server` class starts calculating memory parity checks directly instead of letting `Memory` handle it, encapsulation is broken.
+
+* **Forced Inheritance ("Yo-Yo Problem"):**  
+If you find yourself jumping up and down 5 different files in an inheritance hierarchy just to understand what a single method does, that hierarchy should be refactored into composed objects.

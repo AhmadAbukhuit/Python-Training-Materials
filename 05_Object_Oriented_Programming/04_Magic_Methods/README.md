@@ -1,6 +1,6 @@
 # Magic (Dunder) Methods
 
-Python objects have hidden superpowers. Built-in functions like `len()`, `print()`, equality checks (`==`), and mathematical operators (`+`, `-`) do not work on custom classes out of the box. 
+Python objects have hidden superpowers. Built-in functions like `len()`, `print()`, equality checks (`==`), and mathematical operators (`+`, `-`) do not work on custom classes out of the box.
 
 To enable your custom objects to seamlessly integrate with Python's syntax and standard library, you implement **Magic Methods** (also known as **Dunder Methods**, short for *Double Underscore*).
 
@@ -138,6 +138,7 @@ with ManagedConnection("10.0.0.1") as conn:
 ```
 
 **Output:**
+
 ```text
 Connecting to 10.0.0.1...
 Running queries on 10.0.0.1
@@ -157,7 +158,7 @@ Safely disconnecting from 10.0.0.1.
 | | `__hash__(self)` | `hash(obj)`, storing objects in `set` or as `dict` keys |
 | **Collections** | `__len__(self)` | `len(obj)` |
 | | `__getitem__(self, key)` | `obj[key]` |
-| | `__contains__(self, item)`| `item in obj` |
+| | `__contains__(self, item)` | `item in obj` |
 | | `__iter__(self)` | `for item in obj:` |
 | **Operators** | `__add__(self, other)` | `obj + other` |
 | | `__sub__(self, other)` | `obj - other` |
@@ -167,6 +168,8 @@ Safely disconnecting from 10.0.0.1.
 
 ## 6. Common Gotchas to Avoid
 
-> [!WARNING]
-> * **Must Return Strings:** Both `__str__` and `__repr__` must return a string. Returning an integer, list, or `None` will raise a runtime `TypeError`.
-> * **Return `NotImplemented` for Unknown Types:** When writing operators like `__add__` or `__eq__`, if the `other` operand is an unexpected type, return `NotImplemented` instead of raising an error. This allows Python to try the reverse operation on the other object (e.g., `other.__radd__`).
+* **Must Return Strings:**  
+Both `__str__` and `__repr__` must return a string. Returning an integer, list, or `None` will raise a runtime `TypeError`.
+
+* **Return `NotImplemented` for Unknown Types:**  
+When writing operators like `__add__` or `__eq__`, if the `other` operand is an unexpected type, return `NotImplemented` instead of raising an error. This allows Python to try the reverse operation on the other object (e.g., `other.__radd__`).
