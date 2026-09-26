@@ -29,7 +29,7 @@ jobs:
 
       - name: Run linter and capture output
         id: linter
-        run: markdownlint-cli2 "**/*.md" > lint_report.txt 2>&1
+        run: markdownlint-cli2 "**/*.md" 2>&1 | tee lint_report.txt
         continue-on-error: true # Keep going so we can manage issues
 
       - name: Manage GitHub Issues
@@ -50,7 +50,7 @@ jobs:
           while IFS=$'\t' read -r issue_num file_path; do
             if [ -n "$issue_num" ] && ! grep -Fxq "$file_path" bad_files.txt; then
               echo "Closing issue #$issue_num for $file_path (Fixed!)"
-              gh issue close "$issue_num" -m "✅ The markdown issues in \`$file_path\` have been fixed in the latest commit!"
+              gh issue close "$issue_num" --comment "✅ The markdown issues in \`$file_path\` have been fixed in the latest commit!" --reason "completed"
             fi
           done < open_issues.txt
 
