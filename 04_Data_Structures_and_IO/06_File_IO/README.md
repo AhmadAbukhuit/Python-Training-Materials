@@ -85,4 +85,4 @@ print(f"Welcome back, {loaded_data['username']}!")
 print(f"Your primary language is {loaded_data['languages'][0]}.")
 ```
 
-Mastering the `JSON` module is critical. In Module 07 (FastAPI), practically every piece of data you send or receive across the internet will be formatted as JSON!
+Mastering the `JSON` module is critical. In Module 06 (FastAPI), practically every piece of data you send or receive across the internet will be formatted as JSON!

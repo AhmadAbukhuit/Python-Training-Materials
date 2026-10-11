@@ -96,4 +96,4 @@ server_response = {
 print(server_response["data"]["metrics"]["logins"])  # Outputs: 42
 ```
 
-Mastering nested dictionaries here will make Module 07 (FastAPI) much easier!
+Mastering nested dictionaries here will make Module 06 (FastAPI) much easier!
