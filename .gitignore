@@ -14,3 +14,6 @@ __pycache__/
 
 # Data sets (optional, if you want them to download data dynamically later)
 *.log
+
+# Ruff
+.ruff_cache

@@ -4,5 +4,6 @@ default: true
 # Disable the line-length limit (MD013)
 MD007: false
 MD013: false
+MD024: false
 MD033: false
 MD036: false

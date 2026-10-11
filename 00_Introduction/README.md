@@ -38,7 +38,7 @@ Python is not just a general-purpose language; it is the backbone of the most ra
 
 * **🧠 Artificial Intelligence & Generative AI (AI Engineer):** Python is the undisputed king here. From training Large Language Models (LLMs) to building autonomous agents, frameworks like PyTorch and TensorFlow make Python the "operating system" for the AI revolution.
 * **📊 Data Engineering & Analytics (Data Engineer/Analyst):** Modern businesses are drowning in data but starving for insights. Using libraries like Pandas and NumPy allows for high-speed manipulation of millions of rows of data. Furthermore, Python replaces complex Excel macros with automation scripts that handle data cleaning and reporting automatically.
-* **🌐 Backend Web Development (Backend Engineer):** Python powers the servers behind massive applications like Instagram and Spotify. Using modern frameworks like FastAPI (which we cover in Module 07), developers build lightning-fast RESTful APIs to connect databases to web and mobile apps.
+* **🌐 Backend Web Development (Backend Engineer):** Python powers the servers behind massive applications like Instagram and Spotify. Using modern frameworks like FastAPI (which we cover in Module 06), developers build lightning-fast RESTful APIs to connect databases to web and mobile apps.
 * **☁️ Cloud Computing & DevOps (DevOps Engineer):** Python is the glue that holds the internet together. Engineers use Python to write scripts that automate cloud infrastructure (AWS, Azure), manage Docker containers, and deploy code via CI/CD pipelines.
 * **🛡️ Cybersecurity (Security Analyst/Penetration Tester):** Because Python allows for rapid script development, it is heavily used by security professionals to write custom network scanners, automate penetration testing, and analyze malware.
 
@@ -64,9 +64,8 @@ This curriculum is carefully sequenced. We will build your knowledge layer by la
 * **📦 03. Environment & Tooling:** Amateurs install packages globally; professionals use isolated workspaces. You will learn to use `venv` and `pip` to manage dependencies securely.
 * **💾 04. Data Structures & I/O:** You will move beyond simple variables to manage complex collections (Dictionaries, Sets) and persist your data to the hard drive using JSON and standard file management.
 * **📐 05. Object-Oriented Programming:** We will shift how you think about code. You will learn to architect software by modeling real-world entities using classes, inheritance, and encapsulation.
-* **📊 06. Data Science Ecosystem:** You will harness the true power of data. We will utilize NumPy arrays (which operate 50x faster than standard lists) and Pandas DataFrames for intensive data wrangling.
-* **⚡ 07. Building APIs with FastAPI:** You will step into the world of web infrastructure, building high-performance RESTful APIs to serve data across the internet.
-* **🎓 08. Real-World APIs & Capstone:** Your final exam. You will fetch data from public APIs, process it, and deploy a comprehensive project that proves your capability to employers.
+* **⚡ 06. Building APIs with FastAPI:** You will step into the world of web infrastructure, building high-performance RESTful APIs to serve data across the internet.
+* **🎓 07. Real-World APIs & Capstone:** Your final exam. You will fetch data from public APIs, process it, and deploy a comprehensive project that proves your capability to employers.
 
 ## 🗝️ Keys to Success in this Training
 

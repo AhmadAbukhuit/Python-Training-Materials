@@ -20,11 +20,9 @@ Navigate to the respective directories below to access the detailed `README.md` 
   Working with complex collections (lists, dictionaries, sets) and file input/output management.
 * **[05. Object-Oriented Programming](./05_Object_Oriented_Programming/)**
   Classes, inheritance, encapsulation, and modular design patterns.
-* **[06. Data Science Ecosystem](./06_Data_Science_Ecosystem/)**
-  Intensive data manipulation, aggregation, and analysis utilizing NumPy and Pandas.
-* **[07. Building APIs with FastAPI](./07_Building_APIs_with_FastAPI/)**
+* **[06. Building APIs with FastAPI](./06_Building_APIs_with_FastAPI/)**
   Building high-performance RESTful APIs, routing, and data validation using Pydantic.
-* **[08. Real-World APIs & Capstone](./08_Real_World_and_Capstone/)**
+* **[07. Real-World APIs & Capstone](./07_Real_World_and_Capstone/)**
   Fetching data from public REST APIs and the final comprehensive project.
 
 ## Getting Started
@@ -36,7 +34,7 @@ Navigate to the respective directories below to access the detailed `README.md` 
     cd Python-Training-Materials
     ```
 
-2. Review the **[03. Environment & Tooling](./03_Environment_and_Tooling/)** module to ensure your Python environment is set up correctly before diving into the data science and API tasks.
+2. Review the **[03. Environment & Tooling](./03_Environment_and_Tooling/)** module to ensure your Python environment is set up correctly before diving into the API and capstone tasks.
 
 ## 🚀 How to Use This Repository
 
