@@ -26,4 +26,16 @@ In this module, you will master how to design robust, modular, and reusable soft
   Moving from basic OOP to professional software architecture: adhering to the Gang of Four principle (*"Favor object composition over class inheritance"*), distinguishing "IS-A" from "HAS-A", using Dependency Injection, and building flexible, modular composite systems.
 
 * **[6. Data Classes & Modern Python OOP](./06_Dataclasses_and_Modern_OOP/)**  
-Eliminating repetitive boilerplate in modern Python (3.7+) with `@dataclass`, typed fields, safe defaults with `field(default_factory=...)`, immutable records with `frozen=True`, and post-init validation with `__post_init__`.
+  Eliminating repetitive boilerplate in modern Python (3.7+) with `@dataclass`, typed fields, safe defaults with `field(default_factory=...)`, immutable records with `frozen=True`, and post-init validation with `__post_init__`.
+
+---
+
+## Mini Projects
+
+### [The Cloud Fleet Orchestrator](./Projects/)
+
+**Scenario:** Combine all OOP concepts from this module into an enterprise-grade cloud infrastructure manager. You will model hardware components through Composition, define interface contracts using Abstract Base Classes (ABCs), protect internal state via `@property` validation, dispatch tasks polymorphically to specialized servers, emulate native Python containers using Magic Methods (`len`, `+`, `in`, `[]`), and log execution metrics with modern Data Classes.
+
+* **Where to work:** Navigate to the **[Projects](./Projects/)** directory.
+* **Code Implementation:** Inspect and run `fleet_orchestrator.py`.
+* **Automated Testing:** Run `python test_fleet_orchestrator.py` to verify all 7 OOP criteria pass.
