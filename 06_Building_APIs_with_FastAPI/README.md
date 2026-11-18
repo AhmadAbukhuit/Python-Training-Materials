@@ -39,6 +39,9 @@ flowchart LR
 
 ### Subtopics in This Module
 
+* **[0. Networking & Web Fundamentals](./00_Networking_and_Web_Basics/)**  
+  Essential internet concepts before writing API code: Frontend vs. Backend, What is an API, network identifiers (MAC, IP, Port), web protocols (DNS, HTTP, HTTPS), HTTP request methods and status codes, and the complete step-by-step lifecycle of a web request.
+
 * **[1. FastAPI Fundamentals: The First Endpoint](./01_FastAPI_Fundamentals/)**  
   Understanding ASGI vs. WSGI, installing FastAPI & Uvicorn, creating your first app, HTTP methods, and exploring the automatic Swagger documentation (`/docs`).
 
