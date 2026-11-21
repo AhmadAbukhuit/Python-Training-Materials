@@ -43,7 +43,7 @@ Comments explain why code does something, not what it does.
 
 """
 This is a multi-line string.
-When placed at the top of a function or file, 
+When placed at the top of a function or file,
 it acts as a 'Docstring' to document the code's purpose.
 """
 ```
